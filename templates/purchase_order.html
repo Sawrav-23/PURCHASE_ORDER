@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Order</title>
+</head>
+<body>
+    <h1>Purchase Order Based on Quantity Sold</h1>
+    <table border="1">
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Total Cost</th>
+        </tr>
+        {% for item in purchase_order %}
+        <tr>
+            <td>{{ item['Product ID'] }}</td>
+            <td>{{ item['Product Name'] }}</td>
+            <td>{{ item['Quantity'] }}</td>
+            <td>{{ item['Total Cost'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
